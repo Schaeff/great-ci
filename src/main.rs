@@ -19,6 +19,8 @@ impl<'a> fmt::Display for Greeting<'a> {
     }
 }
 
+fn main() {}
+
 #[cfg(test)]
 mod tests {
     use super::*;
