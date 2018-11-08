@@ -2,5 +2,6 @@
 name = "great-ci"
 version = "0.1.0"
 authors = ["schaeff <thibaut@schaeff.fr>"]
+crate-type = ["lib"]
 
 [dependencies]
