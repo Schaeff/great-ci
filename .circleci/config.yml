@@ -11,3 +11,25 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+  deploy:
+    docker:
+      - image: circleci/python
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+        name: Docker status
+        command: docker ps
+      - run:
+        name: build
+        command: docker build -t great .
+
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
