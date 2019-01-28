@@ -19,6 +19,8 @@ impl<'a> fmt::Display for Greeting<'a> {
     }
 }
 
+fn main() {}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -26,6 +28,7 @@ mod tests {
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
+        assert_eq!(0, 0);
     }
 
     #[test]
