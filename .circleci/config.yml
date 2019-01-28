@@ -19,11 +19,11 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run:
-        name: Docker status
-        command: docker ps
+          name: Docker status
+          command: docker ps
       - run:
-        name: build
-        command: docker build -t great .
+          name: build
+          command: docker build -t great .
 
 workflows:
   version: 2
